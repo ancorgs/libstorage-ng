@@ -51,6 +51,7 @@ namespace storage
 
     Btrfs::Impl::Impl(const xmlNode* node)
 	: BlkFilesystem::Impl(node)
+        , configure_snapper(false)
     {
     }
 

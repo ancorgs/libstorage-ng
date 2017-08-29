@@ -66,6 +66,9 @@ namespace storage
 	BtrfsSubvolume* find_btrfs_subvolume_by_path(const string& path);
 	const BtrfsSubvolume* find_btrfs_subvolume_by_path(const string& path) const;
 
+        bool get_configure_snapper() const { return configure_snapper; }
+        void set_configure_snapper(bool configure) { Impl::configure_snapper = configure; }
+
     public:
 
 	Impl()
@@ -93,6 +96,9 @@ namespace storage
 
 	virtual void do_set_label() const override;
 
+    private:
+
+        bool configure_snapper;
     };
 
 }
