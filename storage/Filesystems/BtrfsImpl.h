@@ -27,6 +27,7 @@
 
 #include "storage/Filesystems/Btrfs.h"
 #include "storage/Filesystems/BlkFilesystemImpl.h"
+#include "storage/Utils/SnapperConfig.h"
 #include "storage/Action.h"
 
 
@@ -74,6 +75,8 @@ namespace storage
 	Impl()
 	    : BlkFilesystem::Impl() {}
 
+        virtual ~Impl();
+
 	Impl(const xmlNode* node);
 
 	virtual void check() const override;
@@ -94,11 +97,16 @@ namespace storage
 
 	virtual void do_create() override;
 
+	virtual void do_mount(CommitData& commit_data, const MountPoint* mount_point) const override;
+
+	virtual void do_add_to_etc_fstab(CommitData& commit_data, const MountPoint* mount_point) const override;
+
 	virtual void do_set_label() const override;
 
     private:
 
         bool configure_snapper;
+        SnapperConfig * snapper_config;
     };
 
 }
