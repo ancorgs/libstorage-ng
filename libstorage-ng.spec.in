@@ -144,9 +144,6 @@ autoreconf -fvi
    --disable-silent-rules
 make %{?_smp_mflags}
 
-%check
-make %{?_smp_mflags} check LOCALEDIR=%{buildroot}%{_datadir}/locale
-
 %install
 %make_install
 find %{buildroot} -type f -name "*.la" -delete -print

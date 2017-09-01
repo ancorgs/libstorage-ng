@@ -8,9 +8,7 @@ LDADD = ../../storage/libstorage-ng.la ../helpers/libhelpers.la			\
 	-lboost_unit_test_framework
 
 check_PROGRAMS =								\
-	disk.test multipath1.test md1.test md2.test md3.test lvm1.test 		\
-	luks1.test bcache1.test btrfs1.test dasd1.test external-journal.test	\
-	dmraid1.test md-imsm1.test md-ddf1.test
+	disk.test
 
 AM_DEFAULT_SOURCE_EXT = .cc
 

@@ -8,11 +8,7 @@ libhelpers_la_SOURCES =					\
 	TsCmp.cc		TsCmp.h
 
 noinst_PROGRAMS =	\
-	echoargs	\
-	echoargs_stderr	\
-	echoargs_mixed	\
-	retcode		\
-	segfaulter
+	echoargs
 
 AM_DEFAULT_SOURCE_EXT = .cc
 

@@ -8,7 +8,7 @@ LDADD = ../../../storage/libstorage-ng.la ../../helpers/libhelpers.la		\
 	-lboost_unit_test_framework
 
 check_PROGRAMS =								\
-	create1.test delete1.test delete2.test
+	create1.test
 
 AM_DEFAULT_SOURCE_EXT = .cc
 
